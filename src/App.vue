@@ -1,32 +1,47 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <div class="box1"></div>
+    <div class="box2"></div>
     <router-view/>
   </div>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
 
-#nav {
-  padding: 30px;
-}
+  body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto';
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #5256a0;
+    overflow: hidden;
+  }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
+  .box1{
+    z-index: -2222;
+    position: absolute;
+    background-color: #5c62c4;
+    width: 1200px;
+    height: 500px;
+    left: -150px;
+    bottom: -200px;
+    transform: rotate(20deg);
+    border-radius: 25px;
+  }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
+  .box2{
+    z-index: -2223;
+    position: absolute;
+    background-color: #5c62c4;
+    width: 700px;
+    height: 500px;
+    top: -100px;
+    right: -100px;
+    transform: rotate(20deg);
+    border-radius: 25px;
+  }
 </style>
